@@ -2,13 +2,18 @@
 
 session_start();
 
-$categorias = [];
-$categorias[] = 'Infantil';
-$categorias[] = 'Adolescente';
-$categorias[] = 'Adulto';
+include "servicos/servicoCategoriaCompetidor.php";
+include "servicos/servicoMensagemSessao.php";
+include "servicos/servicoValidacao.php";
 
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
+
+defineCategoriaCompetido($nome , $idade);
+
+header('location: index.php');
+
+/*
 
 //empty verifica se o valor está vazio
 if(empty($nome)){
@@ -44,45 +49,7 @@ else if(!is_numeric($idade)){
 
 }
 
-
-if($idade >= 6 && $idade <= 12){
-
-    for ($i = 0; $i <= count($categorias); $i++) { 
-        if($categorias[$i] == 'Infantil')
-        //echo 'O nadador(a): '.$nome.' compete na categoria '.$categorias[$i];
-        {
-            $_SESSION['Mensagem-de-sucesso'] = "O nadador ". $nome. " compete na categoria". $categorias[$i];
-            header('location: index.php');
-            return;
-        }
-       }
-   
-   
-}
-else if($idade >= 13 && $idade <=18){
-
-    for ($i = 0; $i <= count($categorias); $i++) { 
-        if($categorias[$i] == 'Adolescente')
-        //echo 'O nadador(a): '.$nome.' compete na categoria '.$categorias[$i];
-        {
-            $_SESSION['Mensagem-de-sucesso'] = "O nadador ". $nome. " compete na categoria". $categorias[$i];
-            header('location: index.php');
-            return;
-        }
-       }
-
-    
-} else {
-    for ($i = 0; $i <= count($categorias); $i++) { 
-        if($categorias[$i] == 'Adulto')
-        //echo 'O nadador(a): '.$nome.' compete na categoria '.$categorias[$i];
-        {
-            $_SESSION['Mensagem-de-sucesso'] = "O nadador ". $nome. " compete na categoria". $categorias[$i];
-            header('location: index.php');
-            return;
-        }
-       }
-}
+*/
 
 
 ?>
