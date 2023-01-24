@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App;
 
 class ContaBancaria{
-    private string $banco = "Banco Inter";
+    private string $banco;
     private string $nomeTitular = "Gle";
     private string $numeroAgencia = "45457";
     private string $numeroConta = "787878-10";
@@ -30,6 +30,16 @@ class ContaBancaria{
             'saldo' => $this -> saldo,
         ];
 
+    }
+
+
+    public function setBanco(string $banco): void{
+        $this->banco = $banco;
+
+    }
+
+    public function getBanco() : string {
+        return $this->banco;
     }
 
 
