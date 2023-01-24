@@ -1,0 +1,16 @@
+{
+    "name": "usuario/metodos-e-atributos",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gleiciane Galdino",
+            "email": "gleicianegaldino25@gmail.com"
+        }
+    ],
+    "require": {}
+}
