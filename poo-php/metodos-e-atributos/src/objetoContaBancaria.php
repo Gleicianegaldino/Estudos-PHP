@@ -9,6 +9,7 @@ use App\objetoContaBancaria;
 $conta = new ContaBancaria();
 //var_dump($conta);
 //var_dump($conta->banco);
-var_dump($conta->exibirDadosConta());
+//var_dump($conta->exibirDadosConta());
 
+var_dump($conta->exibirNomeConta());
 ?>

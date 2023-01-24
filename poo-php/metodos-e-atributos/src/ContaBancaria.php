@@ -5,11 +5,19 @@ declare(strict_types=1);
 namespace App;
 
 class ContaBancaria{
-    public string $banco = "Banco Inter";
-    public string $nomeTitular = "Gle";
-    public string $numeroAgencia = "45457";
-    public string $numeroConta = "787878-10";
-    public float $saldo = 0;
+    private string $banco = "Banco Inter";
+    private string $nomeTitular = "Gle";
+    private string $numeroAgencia = "45457";
+    private string $numeroConta = "787878-10";
+    private float $saldo = 0;
+
+
+    public function exibirNomeConta(): array{
+        return [
+            'nomeTitular' => $this -> nomeTitular,
+            'numeroConta' => $this -> numeroConta,
+        ];
+    }
 
     
     public function exibirDadosConta(): array
