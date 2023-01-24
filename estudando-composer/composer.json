@@ -1,0 +1,13 @@
+{
+    "name": "usuario/estudando-composer",
+    "description": "Estudando composer",
+    "authors": [
+        {
+            "name": "Gleiciane Galdino",
+            "email": "gleicianegaldino25@gmail.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.1"
+    }
+}
