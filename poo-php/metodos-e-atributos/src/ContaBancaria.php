@@ -22,7 +22,24 @@ class ContaBancaria{
         $this->saldo = $saldo;
     }
 
+    public function depositar(float $valor): string
+    {
+        $this->saldo += $valor;
+        return 'Depósito de R$ ' . number_format($valor, 2, ',', '') . ' realizado';
+    }
 
+    public function sacar(float $valor): string
+    {
+        $this->saldo -= $valor;
+        return 'Saque de R$ ' . number_format($valor, 2, ',', '') . ' realizado';
+    }
+
+    public function obterSaldo(): string
+    {
+        return 'Seu saldo atual é: R$ ' . number_format($this->saldo, 2, ',', '');
+    }
+
+    /*
 
     public function exibirNomeConta(): array{
         return [
@@ -43,6 +60,7 @@ class ContaBancaria{
         ];
 
     }
+    */
 
 	
 	public function getBanco(): string {
