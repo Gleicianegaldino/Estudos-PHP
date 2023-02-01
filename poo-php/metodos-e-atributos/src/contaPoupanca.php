@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace App;
 
 use App\ContaBancaria;
+use App\contaCorrente;
+use App\DadosContaBancariaInterface;
+use App\OperacoesContaBancariaInterface;
+
 
 class ContaPoupanca extends ContaBancaria
 {

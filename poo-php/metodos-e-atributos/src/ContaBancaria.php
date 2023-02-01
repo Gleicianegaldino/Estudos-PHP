@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace App;
 
-abstract class ContaBancaria
+use App\DadosContaBancariaInterface;
+use App\OperacoesContaBancariaInterface;
+
+abstract class ContaBancaria implements DadosContaBancariaInterface, OperacoesContaBancariaInterface
 {
     protected string $banco;
     protected string $nomeTitular;
